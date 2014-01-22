@@ -3,11 +3,23 @@
 <head>
     <title>Goal Tracker</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/fullcalendar/fullcalendar.css">
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
-</head>
-<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
 
+    <script type="text/javascript" src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+    <script type="text/javascript" src="bower_components/fullcalendar/fullcalendar.js"></script>
+    <script type="text/javascript" src="bower_components/fullcalendar/gcal.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="../js/goalApp.js"></script>
+
+</head>
+<body ng-app="MyApp">
+    <div ng-controller="CalendarController">
+        <div ui-calendar="uiConfig.calendar" class="col-lg-6 calendar" ng-model="eventSources"></div>
+    </div>
 </body>
 </html>
